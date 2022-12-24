@@ -7,6 +7,7 @@ import Work from './Components/Work';
 import uniqid from 'uniqid';
 import OutputIntro from './Components/OutputIntro';
 import OutputSchool from './Components/OutputSchool';
+import OutputWork from './Components/OutputWork';
 
 class App extends Component {
     constructor(props) {
@@ -25,8 +26,15 @@ class App extends Component {
                 school: 'School name',
                 title: 'Title of study',
                 completion: '01/01/2023',
-                additional: 'Some interesting achievements or extra-curricular activites',
-                }
+                additional: 'Some interesting achievements or extra-curricular activites and there are other words to put on this section to see if it overflows.',
+                },
+                {
+                    id:2,
+                    school: 'London Business School',
+                    title: 'Masters in Economy',
+                    completion: '01/01/2023',
+                    additional: 'Things about being part of a group or something',
+                    },
             ],
             work: [
                 {
@@ -51,6 +59,7 @@ class App extends Component {
         <div className='rightSide'>
                 <OutputIntro info={this.state.intro}/>
                 <OutputSchool info={this.state.education} />
+                <OutputWork info={this.state.work} />
         </div>
       
     </div>
