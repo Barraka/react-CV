@@ -5,7 +5,37 @@ class Work extends Component {
         super(props)
         this.state = {
         }
+        this.confirm=this.confirm.bind(this);
     }
+
+    confirm() {
+        const cname = document.querySelector('#cname');
+        const position = document.querySelector('#position');
+        const start = document.querySelector('#start');
+        const end = document.querySelector('#end');
+        const task = document.querySelector('#task');
+
+        const info ={
+            company: cname.value,
+            position: position.value,
+            from: start.value,
+            to: end.value,
+            tasks: task.value,
+        };
+        if(cname.getAttribute('data-id')) {
+            info.id=cname.getAttribute('data-id');
+            this.props.changeWork(info);
+            cname.removeAttribute('data-id');
+        }
+        else this.props.addWork(info);
+        cname.value='';
+        position.value='';
+        start.value='';
+        end.value='';
+        task.value='';
+    }
+
+
     render() {
         return (
             <div className='section'>
@@ -26,11 +56,11 @@ class Work extends Component {
                     <input type="date" name="end" id="end"></input>
                 </div>
                 <div className="sectionLine work">
-                    <label htmlFor="task" className='sectionLabel'>Task:</label>
+                    <label htmlFor="task" className='sectionLabel'>Tasks:</label>
                     <textarea name="task" id="task"></textarea>
                 </div>
                 <div className="submitButton">
-                    <button>Add to CV</button>
+                    <button onClick={this.confirm}>Add to CV</button>
                 </div>
             </div>
         )

@@ -1,5 +1,9 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Corben&family=Dosis:wght@600&family=Montserrat&family=Open+Sans:wght@500&family=Poppins&family=Roboto&display=swap');
+:root {
+    --darkBlue:rgb(4, 28, 48);
+    --edBackground:rgba(146, 151, 223, 0.712);
+    --workBackground:rgba(146, 223, 194, 0.486);
+}
 .outputSection {
     display: flex;
     justify-content: left;
@@ -9,6 +13,7 @@
     padding: 10px;
     border-radius: 10px;
     background-color: rgb(169, 207, 240);
+    background: linear-gradient(rgb(169, 207, 240), rgb(105, 179, 243));
     width:100%;
     max-width:500px;
     position: relative;
@@ -30,13 +35,26 @@
     stroke: rgb(22, 119, 199);
     transform: scale(1.2);
 }
+.deleteWrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
 /* -------- Intro -------- */
 .picWrapper {
     width: 100px;
+    
+    overflow: hidden;
 }
 .picWrapper img{
-    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+}
+.chooseFile {
+    display: none;
 }
 .cvIntro {
     display: flex;
@@ -46,6 +64,8 @@
     text-align: left;
     gap: 5px;
     padding: 2px;
+    
+    flex:1;
 }
 .introWrapper {
     display: flex;
@@ -54,28 +74,82 @@
     margin-right: auto;
     padding-left: 15px;
     gap: 15px;
+    width: 95%;
 }
-
+.sectionTitle {
+    font-size: 20px;
+    font-weight: 900;
+    background-color: var(--darkBlue);
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+}
+.nameLine {
+    font-size: larger;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: rgb(2, 104, 70);
+}
+.cvName {
+    margin: 0 5px;
+}
+.cvPhone, .cvEmail {
+    font-size: smaller;
+}
 /* -------- Education -------- */
 .itemSchool {
     display: flex;
     justify-content: center;
     align-items: left;
     flex-direction: column;
-    background-color: rgb(22, 119, 199);
+    background-color: var(--edBackground);    
     border-radius: 10px;
     padding: 15px;
     width: 90%;
     position: relative;
+    margin: 0 0 15px;
+    border: 2px solid var(--darkBlue);
 }
 .titleName {
-    font-size: 20px;
-    font-weight: 900;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration:underline;
+    font-family: 'Poppins',sans-serif;
+    color: rgb(1, 44, 30);
 }
 .subsectionLine {
     text-align: left;    
 }
-.completion {
+ .dates {
     border-bottom: 2px dotted black;
     margin-bottom: 10px;
+    color: var(--darkBlue);
+}
+
+/* -------- Work -------- */
+.itemWork {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    background-color: var(--edBackground);
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+    position: relative;
+    border: 2px solid var(--darkBlue);
+    margin: 0 0 15px;
+}
+.positionName {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration:underline;
+    font-family: 'Poppins',sans-serif;
+    color: rgb(1, 44, 30);
+}
+.workDate {
+    margin-right: 15px;
 }

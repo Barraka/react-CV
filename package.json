@@ -1,5 +1,6 @@
 {
-  "name": "react_render",
+    "homepage":".",
+    "name": "react_render",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,8 +1,15 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(120, 105, 145);
+}
 .App {
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 50px;
 }
 .leftSide {
@@ -24,7 +31,7 @@
     padding: 20px;
     border-radius: 10px;
     min-width: 500px;
-    box-shadow: 0 5px 8px 4px rgb(76, 91, 105);
+    box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.5);
 }
 input {
     font-size: 16px;
@@ -40,12 +47,12 @@ input {
     align-items: center;
     flex-direction: column;
     gap: 15px;
-    background-color: #282c34;
+    background-color: rgb(26, 45, 68);
     width: fit-content;
     padding: 20px;
     border-radius: 10px;
     min-width: 500px;
-    box-shadow: 0 5px 8px 4px rgb(76, 91, 105);
+    box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
 }
 .subsection {
@@ -88,16 +95,51 @@ input {
     background-color: rgb(215, 229, 250);
     font-family: 'Roboto', sans-serif;
 }
-.submitButton button {
-    font-size: 16px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 2px solid transparent;
-    background-color: #4b4f57;
-    color: white;
-    cursor: pointer;
-}
+
 .complete:hover {
     background-color: #5d7199;
     color: white;
 }
+
+.intro{
+    flex-direction: row
+}
+.introLeft {
+    width:100px;
+    border:2px solid #4d5464;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.introLeft img {
+    max-height: 100%;
+    width:100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.introLeft:hover {
+    background-color: #5d7199
+}
+.introRight {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+button {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-color: #448daf;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background-color: #23b5f8;
+    outline:2px solid var(--darkBlue);
+    color: var(--darkBlue);
+}
+   
