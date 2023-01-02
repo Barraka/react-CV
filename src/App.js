@@ -95,18 +95,17 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-        <div className="leftSide">
-            <Intro info={this.state.intro} changeIntro={this.changeIntro}/>
-            <Education info={this.state.education} changeEducation={this.changeEducation}  addEducation={this.addEducation}/>
-            <Work info={this.state.work} changeWork={this.changeWork} addWork={this.addWork}/>
-        </div>
-        <div className='rightSide'>
-                <OutputIntro info={this.state.intro} changeIntro={this.changeIntro}/>
-                <OutputSchool info={this.state.education} removeEducationItem={this.removeEducationItem}/>
-                <OutputWork info={this.state.work} removeWorkItem={this.removeWorkItem}/>
-        </div>
-      
-    </div>
+                <div className="leftSide">
+                    <Intro info={this.state.intro} changeIntro={this.changeIntro}/>
+                    <Education info={this.state.education} changeEducation={this.changeEducation}  addEducation={this.addEducation}/>
+                    <Work info={this.state.work} changeWork={this.changeWork} addWork={this.addWork}/>
+                </div>
+                <div className='rightSide'>
+                        <OutputIntro info={this.state.intro} changeIntro={this.changeIntro}/>
+                        <OutputSchool info={this.state.education} removeEducationItem={this.removeEducationItem}/>
+                        <OutputWork info={this.state.work} removeWorkItem={this.removeWorkItem}/>
+                </div>      
+            </div>
         )
     }
 }
